@@ -1,7 +1,42 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = ({ data }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   if (!data) return null;
 
   const {
@@ -11,7 +46,7 @@ const About = ({ data }) => {
     address: { street, city, state, zip },
     phone,
     email,
-    resumeDownload: resumeDownload
+    resumeDownload
   } = data;
 
   const profilePic = `images/${image}`;
@@ -20,40 +55,24 @@ const About = ({ data }) => {
       <section id="about">
         <motion.div
             className="row"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={containerVariants}
         >
           <div className="three columns">
-            <img
+            <motion.img
                 className="profile-pic"
                 src={profilePic}
                 alt="Profile Pic"
+                variants={itemVariants}
             />
           </div>
           <div className="nine columns main-col">
-            <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              About Me
-            </motion.h2>
-
-            <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-            >
-              {bio}
-            </motion.p>
+            <motion.h2 variants={itemVariants}>About Me</motion.h2>
+            <motion.p variants={itemVariants}>{bio}</motion.p>
             <div className="row">
-              <motion.div
-                  className="columns contact-details"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.6, duration: 0.5 }}
-              >
+              <motion.div className="columns contact-details" variants={itemVariants}>
                 <h2>Contact Details</h2>
                 <p className="address">
                   <span>{name}</span>
@@ -69,12 +88,7 @@ const About = ({ data }) => {
                   <span>{email}</span>
                 </p>
               </motion.div>
-              <motion.div
-                  className="columns download"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.8, duration: 0.5 }}
-              >
+              <motion.div className="columns download" variants={itemVariants}>
                 <p>
                   <a href={resumeDownload} className="button">
                     <i className="fa fa-download"></i>Download Resume
