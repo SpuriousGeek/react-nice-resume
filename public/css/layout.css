@@ -90,7 +90,7 @@ header .social li {
    padding: 0;
 }
 header .social li a { color: #fff; }
-header .social li a:hover { color: #0762f9; }
+header .social li a:hover { color: #80CBC4; }
 
 /* scrolldown link */
 header .scrolldown a {
@@ -104,7 +104,6 @@ header .scrolldown a {
    width: 42px;
    font-size: 42px;
    line-height: 42px;
-   color: #fff;
    border-radius: 100%;
 
    -webkit-transition: all .3s ease-in-out;
@@ -112,7 +111,7 @@ header .scrolldown a {
    -o-transition: all .3s ease-in-out;
    transition: all .3s ease-in-out;
 }
-header .scrolldown a:hover { color: #0762f9; }
+header .scrolldown a:hover { color: #80CBC4; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -174,7 +173,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #fe6928; }
+ul#nav li.current a { color: #80CBC4; }
 
 
 /* ------------------------------------------------------------------ */
@@ -189,7 +188,7 @@ ul#nav li.current a { color: #fe6928; }
 }
 
 #about a, #about a:visited  { color: #fff; }
-#about a:hover, #about a:focus { color: #0762f9; }
+#about a:hover, #about a:focus { color: #80CBC4; }
 
 #about h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
@@ -237,7 +236,7 @@ ul#nav li.current a { color: #fe6928; }
    overflow: hidden;
 }
 
-#resume a, #resume a:visited  { color: #0762f9; }
+#resume a, #resume a:visited  { color: #80CBC4; }
 #resume a:hover, #resume a:focus { color: #313131; }
 
 #resume h1 {
@@ -246,7 +245,7 @@ ul#nav li.current a { color: #fe6928; }
    letter-spacing: 1px;
 }
 #resume h1 span {
-   border-bottom: 3px solid #0762f9;
+   border-bottom: 3px solid #80CBC4;
    padding-bottom: 6px;
 }
 #resume h3 {
@@ -789,14 +788,14 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #191919;
-   padding-top: 96px;
-   padding-bottom: 102px;
-   color: #636363;
+    background: #191919;
+    padding-top: 96px;
+    padding-bottom: 102px;
+    color: #F5F5F5;
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #0762f9; }
+#contact a, #contact a:visited  { color: #80CBC4; }
 #contact a:hover, #contact a:focus { color: #fff; }
 
 #contact h1 {
@@ -820,7 +819,7 @@ call-to-action .button {
 
 #contact h4 {
    font: 16px/24px 'opensans-bold', sans-serif;
-   color: #EBEEEE;
+   color: #80CBC4;
    margin-bottom: 6px;
 }
 #contact p.lead {
@@ -843,40 +842,47 @@ call-to-action .button {
 #contact input,
 #contact textarea,
 #contact select {
-   padding: 10px 20px;
-	color: #eee;
-	background: #373233;
-	margin-bottom: 42px;
-	border: 0;
-	outline: none;
-   font-size: 15px;
-   line-height: 24px;
-   width: 65%;
+    padding: 10px 20px;
+    color: #eee;
+    background: #333333;
+    margin-bottom: 42px;
+    border: 2px solid #333333;
+    outline: none;
+    font-size: 15px;
+    line-height: 24px;
+    width: 65%;
+    transition: all 0.3s ease; /* Smooth transition for colour changes */
 }
 #contact input:focus,
 #contact textarea:focus,
 #contact select:focus {
 	color: #fff;
-	background-color: #0762f9;
+    border-color: #80CBC4;
+    background-color: #2A2A2A;
+    outline: none;
+    box-shadow: 0 0 5px rgba(64, 224, 208, 0.5); /* Adds a subtle teal glow */
 }
+
 #contact button.submit {
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color:#fff;
-   background: #0D0D0D;
-	border: none;
-   cursor: pointer;
-   height: auto;
-   display: inline-block;
-	border-radius: 0px;
-   margin-left: 26%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #F5F5F5;
+    background: #00897B;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    display: inline-block;
+    border-radius: 0;
+    margin-left: 26%;
+    padding: 12px 24px; /* Ensure good tap target size */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 #contact button.submit:hover {
-	color: #0D0D0D;
-	background: #fff;
+	background: #00695C;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* Subtle elevation on hover */
 }
 #contact span.required {
-	color: #0762f9;
+	color: #80CBC4;
 	font-size: 13px;
 }
 #message-warning, #message-success {
@@ -888,7 +894,7 @@ call-to-action .button {
    margin-left: 26%;
 }
 #message-warning { color: #D72828; }
-#message-success { color: #0762f9; }
+#message-success { color: #80CBC4; }
 
 #message-warning i,
 #message-success i {
@@ -928,14 +934,17 @@ call-to-action .button {
 footer {
    padding-top: 48px;
    margin-bottom: 48px;
-   color: #303030;
+   color: #505050;
    font-size: 14px;
    text-align: center;
    position: relative;
 }
 
-footer a, footer a:visited { color: #525252; }
-footer a:hover, footer a:focus { color: #fff; }
+footer a, footer a:visited {
+    color: #606060;
+    transition: color 0.3s ease;
+}
+footer a:hover, footer a:focus { color: #80CBC4; }
 
 /* copyright */
 footer .copyright {
@@ -955,7 +964,7 @@ footer .copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
-    color: #095153;
+    color: #404040;
 }
 footer .copyright  li:first-child:before {
     display: none;
@@ -969,10 +978,9 @@ footer .social-links {
 }
 footer .social-links li {
     display: inline-block;
-    margin: 0;
     padding: 0;
-    margin-left: 42px;
-    color: #F06000;
+    margin: 0 0 0 42px;
+    color: #80CBC4;
 }
 
 footer .social-links li:first-child { margin-left: 0; }
@@ -1003,7 +1011,7 @@ footer .social-links li:first-child { margin-left: 0; }
    line-height: 60px;
  	border-radius: 100%;
 }
-#go-top a:hover { background-color: #0F9095; }
+#go-top a:hover { background-color: #80CBC4; }
 
 
 .social .btn:first-child{
@@ -1015,10 +1023,27 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 .social .btn i{
    margin-right: 15px;
+
 }
-.project-btn{
-   background-color: #1abc9c !important;
+.project-btn {
+    padding: 12px 24px;
+    color: #F5F5F5;
+    background: #00897B !important;
+    transition: all 0.3s ease;
 }
+.project-btn:hover{
+    background-color: #00695C !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
 .github-btn{
-   background-color: #34495e !important;
+    padding: 12px 24px;
+    color: #F5F5F5;
+   background: #233047 !important;
+    transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #233047 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
 }

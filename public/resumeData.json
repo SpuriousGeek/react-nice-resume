@@ -2,29 +2,29 @@
   "main": {
     "name": "Simon Harris",
     "subTitle": "Software Developer & Solution Architect",
-    "description": "Experienced software developer with a passion for creating efficient, scalable solutions across various industries.",
-    "image": "simon-harris-profile.jpg",
+    "description": "Seasoned software developer specializing in crafting efficient, scalable solutions for complex business challenges. With expertise spanning from API development to comprehensive system architecture, I excel at translating technical concepts into practical, innovative applications. My focus on continuous improvement and emerging technologies drives the creation of robust, sustainable software across diverse industries.",
+    "image": "simon-harris.png",
     "bio": "With over a decade of experience in software development, I specialize in building robust applications using .NET technologies, modern web frameworks, and cloud platforms. My expertise spans from crafting efficient APIs to designing comprehensive system architectures. I'm passionate about clean code, continuous learning, and leveraging technology to solve complex business challenges.",
     "contactmessage": "Interested in discussing a project or exploring potential collaborations? I'd be delighted to connect with you.",
     "email": "simon@alphamind.tech",
-    "phone": "07982189054",
+    "phone": "+447982189054",
     "address": {
       "street": "35 Rowley Lane",
       "city": "Derby",
       "state": "Derbyshire",
       "zip": "DE23 1FT"
     },
-    "website": "http://www.simonharris.dev",
-    "resumedownload": "http://www.simonharris.dev/SimonHarris_CV.pdf",
+    "website": "https://www.alphamind.tech",
+    "resumedownload": "SimonH_Software Developer.pdf",
     "social": [
       {
         "name": "linkedin",
-        "url": "https://www.linkedin.com/in/simon-harris-dev",
+        "url": "https://www.linkedin.com/in/simon-harris-9a5b1159/",
         "className": "fa fa-linkedin"
       },
       {
         "name": "github",
-        "url": "https://github.com/SimonHarrisDev",
+        "url": "https://github.com/SpuriousGeek",
         "className": "fa fa-github"
       }
     ]
@@ -68,7 +68,7 @@
         "company": "3tc Software",
         "title": "Software Developer",
         "years": "October 2012 - February 2015",
-        "description": "Developed software packages for emergency services and local authorities, including CAD systems and statistical analysis tools. Created a custom routing engine for emergency response optimization using advanced algorithms and data structures."
+        "description": "Developed software packages for emergency services and local authorities, including CAD systems and statistical analysis tools. Created a custom routing engine for emergency response optimization using advanced path finding algorithms and data structures."
       },
       {
         "company": "CERN",

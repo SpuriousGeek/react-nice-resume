@@ -23,11 +23,11 @@ const Footer = ({ data }) => {
           >
             <ul className="social-links">{networks}</ul>
             <ul className="copyright">
-              <li>&copy; Copyright {new Date().getFullYear()} Your Name</li>
+              <li>&copy; Copyright {new Date().getFullYear()} Alphamind</li>
               <li>
                 Design by{" "}
-                <a title="Styleshout" href="http://www.styleshout.com/">
-                  Styleshout
+                <a title="Alphamind" href="http://www.alphamind.tech/">
+                  Alphamind
                 </a>
               </li>
             </ul>

@@ -158,7 +158,8 @@ body {
 --------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-   color: #313131;
+   /*color: #313131;*/ /* Could still use this colour for the headings used in general*/
+    color: #80CBC4;
 	font-family: 'opensans-bold', sans-serif;
    font-weight: normal;
 }
@@ -549,10 +550,6 @@ select {
 
 }
 
-/* select { padding: 0;
-   width: 220px;
-   } */
-
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -801,7 +798,3 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-
-
-
-
