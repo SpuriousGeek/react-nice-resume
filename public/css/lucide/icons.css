@@ -1,0 +1,41 @@
+﻿/*.scroll-icon {*/
+/*    color: #fff;*/
+/*    transition: all 0.3s ease-in-out;*/
+/*}*/
+
+/*.scroll-icon:hover {*/
+/*    color: #80CBC4;*/
+/*    fill: #80CBC4;*/
+/*}*/
+
+/*!* Ensure the icon is properly centered *!*/
+/*.scrolldown {*/
+/*    position: absolute;*/
+/*    bottom: 30px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.scrolldown a {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+.scroll-icon {
+    --icon-fill: #fff;
+    --icon-stroke: #fff;
+    --icon-chevron: #333;
+    transition: --icon-fill 0.3s ease-in-out,
+    --icon-stroke 0.3s ease-in-out,
+    --icon-chevron 0.3s ease-in-out;
+}
+
+.scroll-icon:hover {
+    --icon-fill: #80CBC4;
+    --icon-stroke: #80CBC4;
+    --icon-chevron: #333;
+}
