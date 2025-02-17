@@ -1,16 +1,62 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ParticlesBg from "particles-bg";
 import {motion} from "framer-motion";
 import ScrollIcon from "./icons/ScrollIcon";
 
 const Header = ({data}) => {
-    if (!data) return null;
+    // Add state to track the number of particles
+    const [particleCount, setParticleCount] = React.useState(250);
+
+    // Function to calculate an appropriate number of particles
+    const calculateParticleCount = () => {
+        const width = window.innerWidth;
+
+        // Scale number of particles based on screen width breakpoints
+        if(width <= 480) {              // Mobile phones
+            console.log("Mobile");
+            return 100;
+        } else if (width <= 768) {      // Tablets
+            console.log("Tablet");
+            return 150;
+        } else if (width <= 1024) {     // Small laptops
+            console.log("Laptop");
+            return 200;
+        } else {                        // Larger screens
+            console.log("Desktop");
+            return 250;
+        }
+    };
+
+    // Effect to handle screen resize
+    useEffect(() => {
+        // Set initial particles count
+        setParticleCount(calculateParticleCount());
+
+        // Create the resize handler
+        const handleResize = () => {
+            // Add a small delay to avoid excessive updates
+            const timeoutId = setTimeout(() => {
+                setParticleCount(calculateParticleCount());
+            }, 150);
+
+            // Clean up timeout on subsequent calls
+            return () => clearTimeout(timeoutId);
+        };
+
+        // Add event listener for window resize
+        window.addEventListener("resize", handleResize);
+
+        // Clean up event listener when component unmounts
+        return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty dependency array means this effect runs once on mount
 
     const {name, description, subTitle} = data;
 
+    if (!data) return null;
+
     return (
         <header id="home">
-            <ParticlesBg color="#708090" num={250} type="cobweb" bg={true}/>
+            <ParticlesBg color="#708090" num={particleCount} type="cobweb" bg={true}/>
 
             <nav id="nav-wrap">
                 <a className="mobile-btn" href="#nav-wrap" title="Show navigation">

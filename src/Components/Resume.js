@@ -5,7 +5,7 @@ import {getRandomColor} from "../Utils/colorUtils";
 const Resume = ({ data }) => {
   if (!data) return null;
 
-  const { skillmessage, education, work, skills } = data;
+  const { skillMessage, education, work, skills } = data;
 
   const variants = {
     hidden: { opacity: 0, x: -50 },
@@ -76,7 +76,7 @@ const Resume = ({ data }) => {
                   <h1><span>Skills</span></h1>
               </div>
               <div className="nine columns main-col">
-                  <p>{skillmessage}</p>
+                  <p>{skillMessage}</p>
                   <div className="bars">
                       <ul className="skills">
                           {skills.map(skill => (

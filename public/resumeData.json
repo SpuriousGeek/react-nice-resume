@@ -2,10 +2,10 @@
   "main": {
     "name": "Simon Harris",
     "subTitle": "Software Developer & Solution Architect",
-    "description": "Seasoned software developer specializing in crafting efficient, scalable solutions for complex business challenges. With expertise spanning from API development to comprehensive system architecture, I excel at translating technical concepts into practical, innovative applications. My focus on continuous improvement and emerging technologies drives the creation of robust, sustainable software across diverse industries.",
+    "description": "Senior Software Engineer with 12+ years of hands-on experience building and architecting scalable enterprise solutions. I specialize in cloud transformation and distributed systems, with particular expertise in API development and microservice architectures. My approach combines deep technical knowledge with practical problem-solving, consistently delivering robust solutions that drive business value. I maintain an active interest in emerging technologies, particularly in AI-enhanced development workflows, which I've successfully implemented to improve delivery efficiency and code quality.",
     "image": "simon-harris.png",
-    "bio": "With over a decade of experience in software development, I specialize in building robust applications using .NET technologies, modern web frameworks, and cloud platforms. My expertise spans from crafting efficient APIs to designing comprehensive system architectures. I'm passionate about clean code, continuous learning, and leveraging technology to solve complex business challenges.",
-    "contactmessage": "Interested in discussing a project or exploring potential collaborations? I'd be delighted to connect with you.",
+    "bio": "Drawing on over a decade of software engineering experience, I specialize in building cloud-native solutions using .NET technologies and Azure Cloud Services. My experience spans healthcare, maritime insurance, and scientific computing, where I've architected monolith and microservice-based systems that balance technical excellence with practical business needs. I'm passionate about clean code and system design, having led teams in modernizing legacy applications and implementing cloud-first architectures. What drives me is finding elegant solutions to complex technical challenges while ensuring maintainable, high-quality code.",
+    "contactMessage": "Interested in discussing a project or exploring potential collaborations? I'd be delighted to connect with you.",
     "email": "simon@alphamind.tech",
     "phone": "+447982189054",
     "address": {
@@ -15,22 +15,17 @@
       "zip": "DE23 1FT"
     },
     "website": "https://www.alphamind.tech",
-    "resumedownload": "SimonH_Software Developer.pdf",
+    "resumeDownload": "SimonHarris.pdf",
     "social": [
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/simon-harris-9a5b1159/",
         "className": "fa fa-linkedin"
-      },
-      {
-        "name": "github",
-        "url": "https://github.com/SpuriousGeek",
-        "className": "fa fa-github"
       }
     ]
   },
   "resume": {
-    "skillmessage": "My technical expertise covers a wide range of technologies and methodologies:",
+    "skillMessage": "My technical expertise covers a wide range of technologies and methodologies:",
     "education": [
       {
         "school": "Staffordshire University",
@@ -53,10 +48,16 @@
     ],
     "work": [
       {
+        "company": "NorthStandard",
+        "title": "Senior Software Engineer (contract)",
+        "years": "February 2022 - Present",
+        "description": "Leading enterprise-scale digital transformation initiatives for maritime insurance, managing systems handling 500+ concurrent users. Architected cloud-native solutions transitioning critical systems to Azure Cloud Services, implemented modern authentication, and established loosely coupled service-oriented architecture. Key projects include modernizing document management systems, migrating legacy applications to .NET 8, and developing sophisticated claims management platforms."
+      },
+      {
         "company": "Deloitte",
         "title": "API Developer (contract)",
-        "years": "October 2021 - Present",
-        "description": "Developing complex APIs using .NET Core for a Lloyds of London insurance project. Implementing microservices architecture, working with MongoDB, and utilizing Azure cloud services. Driving best practices in code quality and architectural design."
+        "years": "October 2021 - February 2022",
+        "description": "Developed complex insurance system APIs for Lloyds of London, enabling real-time document digitization and contract distribution. Architected microservice solutions using containerized Docker instances and MongoDB Atlas, maintaining 80%+ test coverage while implementing comprehensive API documentation and security measures."
       },
       {
         "company": "Ashfield Healthcare",
@@ -79,37 +80,44 @@
     ],
     "skills": [
       {
-        "name": "C# / .NET",
+        "name": "C# / .NET 8",
         "level": "95%"
       },
       {
-        "name": "JavaScript",
-        "level": "85%"
-      },
-      {
-        "name": "Angular",
-        "level": "75%"
-      },
-      {
-        "name": "SQL Server",
-        "level": "70%"
-      },
-      {
-        "name": "Azure Cloud",
-        "level": "85%"
-      },
-      {
-        "name": "Entity Framework",
+        "name": "Azure Cloud Services",
         "level": "90%"
       },
       {
-        "name": "Azure DevOps / CI/CD",
-        "level": "70%"
+        "name": "Microservices Architecture",
+        "level": "85%"
       },
       {
-        "name": "Docker / Containerization",
-        "level": "65%"
+        "name": "Angular / TypeScript",
+        "level": "85%"
+      },
+      {
+        "name": "DevOps / CI/CD",
+        "level": "80%"
+      },
+      {
+        "name": "Docker / Terraform",
+        "level": "75%"
+      },
+      {
+        "name": "SQL Server / MongoDB",
+        "level": "75%"
+      },
+      {
+        "name": "SharePoint Online / Graph API",
+        "level": "70%"
       }
+    ],
+    "coreCompetencies": [
+      "Software Engineering: Full-stack development, API design, test-driven development",
+      "Enterprise Solution Architecture: Cloud transformation strategies, system modernization, microservices design",
+      "Technical Leadership: Stakeholder management, cross-functional team leadership, architectural governance",
+      "Cloud & DevOps: Azure Cloud Services, CI/CD implementation, infrastructure automation",
+      "Innovation: AI-enhanced development workflows, emerging technology adoption, digital transformation"
     ]
   },
   "portfolio": {

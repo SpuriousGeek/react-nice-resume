@@ -11,7 +11,7 @@ const Contact = ({ data }) => {
 
   if (!data) return null;
 
-  const { name, address: { street, city, state, zip }, phone, contactmessage } = data;
+  const { name, address: { street, city, state, zip }, phone, contactMessage } = data;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +35,7 @@ const Contact = ({ data }) => {
             <h1><span>Get In Touch.</span></h1>
           </div>
           <div className="ten columns">
-            <p className="lead">{contactmessage}</p>
+            <p className="lead">{contactMessage}</p>
           </div>
         </motion.div>
 

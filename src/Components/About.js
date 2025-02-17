@@ -11,9 +11,24 @@ const About = ({ data }) => {
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
+      controls.start("visible")
+          .catch(error => {
+            console.error("Animation failed to start:", error);
+          });
     }
   }, [controls, inView]);
+
+  const {
+    name,
+    image,
+    bio,
+    address: { street, city, state, zip },
+    phone,
+    email,
+    resumeDownload
+  } = data;
+
+  if (!data) return null;
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -36,18 +51,6 @@ const About = ({ data }) => {
       transition: { duration: 0.5 },
     },
   };
-
-  if (!data) return null;
-
-  const {
-    name,
-    image,
-    bio,
-    address: { street, city, state, zip },
-    phone,
-    email,
-    resumeDownload
-  } = data;
 
   const profilePic = `images/${image}`;
 
@@ -88,9 +91,9 @@ const About = ({ data }) => {
                   <span>{email}</span>
                 </p>
               </motion.div>
-              <motion.div className="columns download" variants={itemVariants}>
+              <motion.div className="columns" variants={itemVariants}>
                 <p>
-                  <a href={resumeDownload} className="button">
+                  <a href={resumeDownload} className="button" download={resumeDownload}>
                     <i className="fa fa-download"></i>Download Resume
                   </a>
                 </p>
